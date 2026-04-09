@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC // PROJECT_GALLERY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;900&amp;family=Manrope:wght@400;500;700&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#fffcfb",
+                    "surface-dim": "#dadada",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-primary-container": "#fffbff",
+                    "primary-container": "#e90036",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#646464",
+                    "secondary": "#5e5e5e",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#e9bcba",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "primary-fixed": "#ffdad8",
+                    "on-background": "#1a1c1c",
+                    "background": "#f9f9f9",
+                    "primary": "#ba0029",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#5f3e3e",
+                    "tertiary": "#5c5c5c",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed": "#410008",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-container": "#757474",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#ffb3b2",
+                    "secondary-container": "#e2e2e2",
+                    "surface-variant": "#e2e2e2",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#bf002a",
+                    "on-primary-fixed-variant": "#92001e",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2e1",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container": "#eeeeee",
+                    "outline": "#946e6d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.0rem",
+                    "lg": "0.0rem",
+                    "xl": "0.0rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .screentone {
+            background-image: radial-gradient(#1a1c1c 1px, transparent 1px);
+            background-size: 4px 4px;
+            opacity: 0.1;
+        }
+        .ink-bleed {
+            clip-path: polygon(0% 0%, 100% 0%, 98% 95%, 100% 100%, 0% 100%, 2% 95%);
+        }
+        .manga-panel-angle-1 { transform: rotate(-1deg); }
+        .manga-panel-angle-2 { transform: rotate(1.5deg); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-white">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 py-2 bg-opacity-80 backdrop-blur-md bg-[#f9f9f9] dark:bg-black border-b-4 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,0,41,1)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="menu">menu</span>
+<h1 class="font-['Space_Grotesk'] uppercase tracking-tighter text-2xl font-black italic text-black dark:text-white">KINETIC</h1>
+</div>
+<div class="flex items-center gap-4">
+<nav class="hidden md:flex gap-6">
+<a class="text-[#ba0029] underline decoration-4 underline-offset-4 font-['Space_Grotesk'] uppercase tracking-tighter" href="#">Portfolio</a>
+<a class="text-black dark:text-white font-['Space_Grotesk'] uppercase tracking-tighter hover:bg-[#ba0029] hover:text-white transition-all" href="#">Manga</a>
+<a class="text-black dark:text-white font-['Space_Grotesk'] uppercase tracking-tighter hover:bg-[#ba0029] hover:text-white transition-all" href="#">Archive</a>
+</nav>
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="search">search</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-24 px-4 overflow-x-hidden">
+<!-- TABLE OF CONTENTS SECTION -->
+<section class="mb-12 border-4 border-on-surface p-6 bg-surface-container-lowest relative">
+<div class="absolute inset-0 screentone pointer-events-none"></div>
+<h2 class="font-headline text-4xl font-black tracking-tight uppercase mb-6 flex items-center gap-2">
+<span class="w-8 h-8 bg-primary"></span>
+                TABLE OF CONTENTS
+            </h2>
+<ul class="space-y-3 font-headline text-lg italic font-bold divide-y-2 divide-on-surface">
+<li class="flex justify-between items-end pt-2">
+<span class="bg-on-surface text-surface px-2">01.</span>
+<span class="flex-grow border-b-2 border-dotted border-on-surface mx-2 mb-1 opacity-30"></span>
+<span>CYBER_PUNK_2077</span>
+</li>
+<li class="flex justify-between items-end pt-2">
+<span class="bg-on-surface text-surface px-2">02.</span>
+<span class="flex-grow border-b-2 border-dotted border-on-surface mx-2 mb-1 opacity-30"></span>
+<span>NEO_SHOGUNATE</span>
+</li>
+<li class="flex justify-between items-end pt-2">
+<span class="bg-on-surface text-surface px-2">03.</span>
+<span class="flex-grow border-b-2 border-dotted border-on-surface mx-2 mb-1 opacity-30"></span>
+<span>VOID_RUNNER</span>
+</li>
+<li class="flex justify-between items-end pt-2">
+<span class="bg-on-surface text-surface px-2">04.</span>
+<span class="flex-grow border-b-2 border-dotted border-on-surface mx-2 mb-1 opacity-30"></span>
+<span>MECHA_SOUL</span>
+</li>
+</ul>
+</section>
+<!-- PROJECT GALLERY STACK -->
+<div class="space-y-16">
+<!-- Project 01 -->
+<article class="relative group">
+<div class="absolute -top-4 -left-2 z-20 bg-primary text-white font-headline text-xs px-2 py-1 flex items-center gap-1 border-2 border-on-surface">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+                    STATUS: ACTIVE_FILE
+                </div>
+<div class="relative border-x-4 border-t-8 border-b-4 border-on-surface bg-black overflow-hidden manga-panel-angle-1">
+<img alt="Cyberpunk project cover" class="w-full h-80 object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="cinematic neon-lit cyberpunk city street with rain-slicked asphalt and vibrant holographic advertisements in high contrast style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd6LSKouADyMIe-N304mnu2O_eIfBKy3jsaXK6QaliFyMG2Zq0sDt-3qKs05aMTgX2cTFPdzabgGJQ25eXnGM0Q2a3q33UMCxfKXG9it8zyOaSu3pkUPD5sW15801kVPinDZvjUj4IBMj6MJSen98La4VqTbq9Cvx68-lyWuNYm9MF-zQ76XHR_-47xXpcI5uaq1eWI-FKQX4wJIn35X8pZfGF4VXf0JozT8ubAeaKK1xATYTdg50JpXJQ28lCV_gl2Q1xe8KpAas"/>
+<div class="absolute inset-0 screentone opacity-20 group-hover:opacity-10"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
+<h3 class="font-headline text-5xl font-black text-white uppercase leading-none tracking-tighter drop-shadow-[4px_4px_0px_#ba0029]">
+                            CYBER_PUNK_2077
+                        </h3>
+</div>
+</div>
+<div class="mt-4 p-4 border-4 border-on-surface bg-surface-container-high shadow-[8px_8px_0px_0px_rgba(26,28,28,1)]">
+<p class="font-body text-sm font-bold uppercase leading-tight mb-4">
+                        System integration and narrative architecture for the neon dystopia. 
+                        A manuscript of steel and digital decay.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-surface text-[10px] font-label font-bold px-2 py-1 border border-on-surface">#INTERFACE</span>
+<span class="bg-secondary-container text-on-surface text-[10px] font-label font-bold px-2 py-1 border border-on-surface">#NARRATIVE</span>
+</div>
+</div>
+</article>
+<!-- Project 02 -->
+<article class="relative group">
+<div class="absolute -top-4 -right-2 z-20 bg-on-surface text-white font-headline text-xs px-2 py-1 flex items-center gap-1 border-2 border-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">archive</span>
+                    ARCHIVE_REF: 02-NS
+                </div>
+<div class="relative border-x-8 border-t-4 border-b-8 border-on-surface bg-black overflow-hidden manga-panel-angle-2">
+<img alt="Neo Shogunate project cover" class="w-full h-80 object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="futuristic samurai warrior standing in traditional japanese temple garden with robotic arm elements and glowing katana weapon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTiKd08L7bw21gEiR_3mkO-A_ruXKMIwvmdXYosvTEwPcDuznOVgAas8ZIrN7BEBwEJzinh9IukYLBO_9mII1AMBU4fTNSC3zvpHTeeA6Csh6S2z5GcddJi0LBi4hnbI6GDN3rY-NzFEaCYDybPubxUvKy0qGLg6AcToCUB18heDMoA8c4BztqOdBijfye7M2-4GCDRm4zrxHBQTtG1ogNnHBZOe2kuOAoD54tiRCZMdNYobfC21q0524AgG6sdJ62bSV666kzU_I"/>
+<div class="absolute inset-0 screentone opacity-30"></div>
+<div class="absolute top-1/2 -left-10 -translate-y-1/2 -rotate-90">
+<h3 class="font-headline text-6xl font-black text-white uppercase tracking-tighter opacity-20">
+                            SHOGUNATE
+                        </h3>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<h3 class="font-headline text-5xl font-black text-primary uppercase leading-none tracking-tighter bg-on-surface p-2 inline-block">
+                            NEO_SHOGUNATE
+                        </h3>
+</div>
+</div>
+<div class="mt-4 p-4 border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_#ba0029]">
+<p class="font-body text-sm font-bold uppercase leading-tight mb-4">
+                        Reimagining feudal power structures through a transhumanist lens. 
+                        Blood ink on high-density circuits.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-surface text-[10px] font-label font-bold px-2 py-1 border border-on-surface">#VISUAL_ID</span>
+<span class="bg-secondary-container text-on-surface text-[10px] font-label font-bold px-2 py-1 border border-on-surface">#WORLD_BUILD</span>
+</div>
+</div>
+</article>
+<!-- Project 03 -->
+<article class="relative group">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 z-20 bg-primary text-white font-headline text-xs px-4 py-1 border-2 border-on-surface uppercase">
+                    Coming_Soon
+                </div>
+<div class="relative border-4 border-on-surface bg-black overflow-hidden h-96 flex items-center justify-center">
+<img alt="Void Runner project cover" class="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm" data-alt="dark cosmic abstract with deep reds and blacks resembling a solar flare or ink spreading through dark water with grainy texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsbeP8jVMK-CjXGz0zaL6LMwNGeWqc0BLn39LIVFdpqMPObDT45ArcgoguBIuEOSlIGKKr7PjqNBw77p4FIovwzCot47okYd-In9BIUDgREini1nlBGfuRvUfA1hjcnxTlUvlRbWv0Noyfz5-Dq6zAukov0TWGyjXmHtS405R6q809Ch5O3yMdYPs9xsMJEP8G6pgo8z2S_US3z7DjiSDhvN5UK4RAuLVeIFBFENiIguwOiFUDUJ_DgLWvZsC-Ra5LBW48IHHQEtY"/>
+<div class="absolute inset-0 screentone opacity-50"></div>
+<div class="relative z-10 text-center px-4">
+<h3 class="font-headline text-7xl font-black text-white uppercase tracking-tighter italic border-y-8 border-white py-2">
+                            VOID
+                        </h3>
+<h3 class="font-headline text-7xl font-black text-primary uppercase tracking-tighter italic mt-[-20px]">
+                            RUNNER
+                        </h3>
+</div>
+</div>
+<div class="mt-4 flex gap-4">
+<div class="flex-1 p-4 border-4 border-on-surface bg-surface-container shadow-[4px_4px_0px_0px_rgba(26,28,28,1)]">
+<span class="font-label text-[10px] block opacity-50 mb-1">PROJECT_03</span>
+<span class="font-headline text-xl font-bold uppercase">UNMASKED</span>
+</div>
+<div class="w-20 border-4 border-on-surface bg-primary flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(26,28,28,1)]">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination/Action Ticker -->
+<div class="mt-20 mb-8 border-y-4 border-on-surface py-2 overflow-hidden bg-on-surface">
+<div class="flex whitespace-nowrap animate-marquee">
+<span class="text-surface font-label text-[10px] font-bold uppercase mx-4">CONTINUE TO NEXT VOLUME // PORTFOLIO 2024 // KINETIC // NO MERCY // </span>
+<span class="text-primary font-label text-[10px] font-bold uppercase mx-4">CONTINUE TO NEXT VOLUME // PORTFOLIO 2024 // KINETIC // NO MERCY // </span>
+<span class="text-surface font-label text-[10px] font-bold uppercase mx-4">CONTINUE TO NEXT VOLUME // PORTFOLIO 2024 // KINETIC // NO MERCY // </span>
+</div>
+</div>
+</main>
+<!-- NavigationDrawer Logic for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[60] bg-[#f9f9f9] dark:bg-black border-t-8 border-[#ba0029] flex justify-around items-center p-4">
+<!-- Mapping to Portfolio (Active) -->
+<div class="flex flex-col items-center bg-[#ba0029] text-white p-2 w-16">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold">Portfolio</span>
+</div>
+<div class="flex flex-col items-center bg-transparent text-black dark:text-white p-2 w-16">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold">Manga</span>
+</div>
+<div class="flex flex-col items-center bg-transparent text-black dark:text-white p-2 w-16">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold">Archive</span>
+</div>
+<div class="flex flex-col items-center bg-transparent text-black dark:text-white p-2 w-16">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold">Contact</span>
+</div>
+</nav>
+<!-- Footer from JSON -->
+<footer class="w-full border-t-8 border-[#ba0029] bg-black dark:bg-[#1a1c1c] flex flex-col items-center text-center p-8 gap-4 w-full mb-20">
+<div class="text-white font-bold text-xl font-headline tracking-widest italic">KINETIC EDITORIAL</div>
+<div class="flex gap-6">
+<a class="text-white/60 font-['Inter'] text-xs uppercase tracking-widest hover:text-white" href="#">Terms</a>
+<a class="text-white/60 font-['Inter'] text-xs uppercase tracking-widest hover:text-white" href="#">Privacy</a>
+<a class="text-white/60 font-['Inter'] text-xs uppercase tracking-widest hover:text-white" href="#">Socials</a>
+</div>
+<p class="text-[#ba0029] font-['Inter'] text-xs uppercase tracking-widest">© 2024 KINETIC EDITORIAL. NO MERCY.</p>
+</footer>
+</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC_EDITORIAL | The Living Manuscript</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#474746",
+                    "surface-container-highest": "#e2e2e2",
+                    "tertiary": "#5c5c5c",
+                    "on-background": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#474747",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container": "#eeeeee",
+                    "on-primary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "on-surface": "#1a1c1c",
+                    "outline": "#946e6d",
+                    "surface-dim": "#dadada",
+                    "on-secondary-container": "#646464",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#5f3e3e",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "outline-variant": "#e9bcba",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#410008",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#757474",
+                    "background": "#f9f9f9",
+                    "primary-fixed": "#ffdad8",
+                    "inverse-primary": "#ffb3b2",
+                    "on-primary-fixed-variant": "#92001e",
+                    "secondary": "#5e5e5e",
+                    "secondary-container": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#fffcfb",
+                    "inverse-surface": "#2f3131",
+                    "surface-variant": "#e2e2e2",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#e90036",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#bf002a",
+                    "primary": "#ba0029",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary-fixed": "#e4e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .manga-panel {
+            clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+        }
+        .screentone {
+            background-image: radial-gradient(#1a1c1c 1px, transparent 0);
+            background-size: 4px 4px;
+        }
+        .ink-bleed {
+            filter: url(#rough-edge);
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-white">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full border-b-4 border-zinc-900 dark:border-zinc-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[6px_6px_0px_0px_rgba(26,28,28,1)] z-50 flex justify-between items-center px-6 py-4 transition-all active:translate-y-1 active:translate-x-1">
+<div class="text-3xl font-black italic tracking-tighter text-zinc-900 dark:text-zinc-50 underline decoration-4 decoration-[#ba0029] underline-offset-4">
+            KINETIC_EDITORIAL
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<div class="flex items-center gap-6 font-['Space_Grotesk'] uppercase tracking-tighter font-bold">
+<a class="text-[#ba0029] underline decoration-2 underline-offset-8 hover:skew-x-[-12deg] transition-transform duration-75" href="#">ARCHIVE</a>
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">WORKS</a>
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">CHAPTERS</a>
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">ABOUT</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 border-2 border-on-surface font-headline font-bold uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(26,28,28,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                CONTACT_US
+            </button>
+</div>
+</nav>
+<!-- Hero / Manga Cover Section -->
+<header class="relative min-h-screen flex items-end pt-32 pb-20 px-6 md:px-12 overflow-hidden border-b-[12px] border-on-surface">
+<!-- SFX Background Layer -->
+<div class="absolute top-1/4 left-10 text-[12rem] font-headline font-black text-on-surface opacity-5 select-none -rotate-12">WHOOSH</div>
+<div class="absolute bottom-1/4 right-10 text-[10rem] font-headline font-black text-primary opacity-10 select-none rotate-6">SHING</div>
+<!-- Large Dynamic Illustration -->
+<div class="absolute inset-0 z-0 flex justify-center items-center overflow-hidden">
+<img class="w-full h-full object-cover scale-110 grayscale contrast-125 brightness-90" data-alt="dynamic black and white manga illustration of a character in an action pose with sharp ink lines and dramatic speed lines background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIEink1-3BX17I8SySIAGp2k15qmfyGg-FMdwhxhdQe1G_ihwTGK6-T8IzACy8CJuOCMa0_C2h54mkbx_BuPwNMiH4TcZEUeCgg4aYrz9FGXQgQaxFjykB3SkMHVRLOtWhdur_EdaDQK-FazEvVyP0gtXhbEB8JNexrkUkc_N4Le98DJek_Gu53PdmeKH5wDfl3zVwx9h8X6k1y6PccbsLGUTy2XZL1eSnBLYe-w7-Z1wdrypDpjoTLN1Yf87Jhw59boUorfVbwfs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<!-- Screentone Overlay -->
+<div class="absolute inset-0 screentone opacity-20 pointer-events-none"></div>
+</div>
+<div class="relative z-10 w-full flex flex-col md:flex-row justify-between items-end gap-12">
+<div class="max-w-4xl">
+<h1 class="font-headline font-black text-7xl md:text-[10rem] leading-none tracking-tighter uppercase mb-6 -rotate-2">
+                    KINETIC<br/>
+<span class="text-primary italic inline-block translate-x-12">EDITORIAL</span>
+</h1>
+<p class="font-body text-xl md:text-2xl font-bold max-w-xl bg-on-surface text-surface p-4 border-l-8 border-primary">
+                    A HIGHER STATE OF NARRATIVE DESIGN. WHERE EVERY PIXEL IS A STROKE OF INTENT.
+                </p>
+</div>
+<div class="flex flex-col gap-4 items-end">
+<div class="text-vertical font-headline font-black text-4xl uppercase tracking-[0.2em] border-r-4 border-on-surface pr-4">
+                    VOL. 01 / 2024
+                </div>
+<button class="group relative bg-primary text-white px-10 py-6 text-2xl font-headline font-black uppercase border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(26,28,28,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                    START READING
+                </button>
+</div>
+</div>
+</header>
+<!-- Featured Work: Panel Grid -->
+<section class="py-24 px-6 md:px-12 bg-surface-container">
+<div class="flex items-center gap-6 mb-20 overflow-hidden">
+<h2 class="font-headline font-black text-6xl uppercase shrink-0">SELECTED_WORKS</h2>
+<div class="w-full h-2 bg-on-surface"></div>
+<div class="font-label font-bold text-primary tracking-widest shrink-0">TOP_SECRET_ARCHIVE</div>
+</div>
+<!-- Manga Panel Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Panel 1: Large Focus -->
+<div class="md:col-span-8 group relative overflow-hidden border-[6px] border-on-surface bg-white">
+<div class="absolute top-4 left-4 z-20 bg-primary text-white px-4 py-1 font-label font-black italic">FEATURED_01</div>
+<img class="w-full h-[500px] object-cover grayscale transition-transform duration-500 group-hover:scale-105" data-alt="architectural sketch of a futuristic city in high contrast black ink with dramatic shadows and detailed cross-hatching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQswfH9OpUibBDc650BeBkvpPC6KtKGNAw8VmUZyx2XSeeR2oTMdSlpMEi6_2N68oXc5HYd4KB2dc6TuHp5KhC9lwn6qztI-3OG2cizC_2kFr5tl__crXjFMxhVdgw_88Rrm3dgoUZXNDAvo8eTHWUyUWV3qhvt9aanxuFBHXW4dJ7IxEa28NEZkGrw42VbEYdNjhlti_XgGH7lQxzwRUx_NAPFG2c35xiJWIxlxaxrdziDB8nIuLp6NU_gvPEddcv9iZuhySqPt0"/>
+<div class="absolute inset-0 screentone opacity-0 group-hover:opacity-10 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-surface/90 backdrop-blur-md border-t-4 border-on-surface translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<h3 class="font-headline font-black text-3xl mb-2">NEO_KOBE_CHRONICLES</h3>
+<p class="font-body text-sm font-semibold text-secondary">COMPLETE BRANDING &amp; EDITORIAL DESIGN FOR A CYBERPUNK LIGHT NOVEL SERIES.</p>
+</div>
+</div>
+<!-- Panel 2: Vertical Side -->
+<div class="md:col-span-4 group relative border-[6px] border-on-surface bg-on-surface text-surface overflow-hidden">
+<div class="screentone absolute inset-0 opacity-20"></div>
+<div class="relative z-10 p-8 h-full flex flex-col justify-between">
+<div class="font-headline font-bold text-7xl text-surface/10 leading-none">SFX</div>
+<div>
+<h3 class="font-headline font-black text-4xl mb-4 italic text-primary">INK_BLEED</h3>
+<p class="font-body text-lg font-medium">EXPERIMENTAL TYPEFACE DESIGN INSPIRED BY SHOGI PIECES AND STREET GRAFFITI.</p>
+<button class="mt-8 border-b-4 border-primary text-primary font-headline font-black text-xl hover:skew-x-[-10deg] transition-all">VIEW_PROJECT</button>
+</div>
+</div>
+</div>
+<!-- Panel 3: Small Grid -->
+<div class="md:col-span-4 group relative border-[6px] border-on-surface overflow-hidden aspect-square">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="abstract ink wash landscape with sharp mountain peaks and a single red sun circle in minimalist Japanese style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJCkfmSGIrYX27N1XUWCFrKUINABlaEXSUG6QPglIlnPRCTn6IhaFgVGmUfAUFM5J_1t5ATXOKd8Wb0BFU-1hNxom70JsTOiTZ5CFDUuNXtoLjFcV6XZCmy4Hxp6qH7ts_6dSKnuMU6VEjaj8ZP8z80FVZ8ZwNb3oV5a0mUVHsezC09AQKjczOiRwJbT2nQszxyE7ali_AlkdNRTRONKBevxZHN7zqwEwyK1Rs6kYjehl8cTNcGOqoULnZoIFW1pb8LFHkRF58VgU"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Panel 4: Wide Grid -->
+<div class="md:col-span-8 group relative border-[6px] border-on-surface overflow-hidden">
+<div class="absolute inset-0 bg-on-surface screentone opacity-5"></div>
+<div class="p-12 flex flex-col md:flex-row gap-8 items-center h-full">
+<div class="flex-1">
+<div class="bg-primary text-white px-2 py-1 inline-block font-label text-xs font-black mb-4">CASE_STUDY_04</div>
+<h3 class="font-headline font-black text-5xl tracking-tighter uppercase mb-4 leading-none">NARRATIVE_GEOMETRY</h3>
+<p class="font-body text-on-surface/70 leading-relaxed font-semibold">An exploration of how panel flow affects user engagement in long-form digital storytelling. Integrating UX principles with manga composition techniques.</p>
+</div>
+<div class="w-full md:w-1/3 h-48 bg-surface-container-high border-4 border-dashed border-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-20">auto_awesome_motion</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Quote Section -->
+<section class="relative py-32 bg-on-surface text-surface overflow-hidden">
+<div class="absolute top-0 right-0 p-12 text-[15rem] font-headline font-black text-surface/5 leading-none pointer-events-none">SLASH</div>
+<div class="container mx-auto px-6 relative z-10 text-center">
+<blockquote class="max-w-5xl mx-auto">
+<p class="font-headline font-black text-4xl md:text-7xl leading-tight uppercase italic mb-12">
+                    "DESIGN IS NOT JUST VISUAL; IT IS A <span class="text-primary underline decoration-8 underline-offset-4">CONVERSATION</span> HELD IN SILENCE BETWEEN THE PAGE AND THE EYE."
+                </p>
+<cite class="font-label tracking-[0.4em] font-bold text-primary">— KINETIC EDITORIAL MANIFESTO</cite>
+</blockquote>
+</div>
+</section>
+<!-- Ticker / Marquee -->
+<div class="bg-primary py-3 overflow-hidden whitespace-nowrap border-y-4 border-on-surface">
+<div class="inline-block animate-marquee">
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">NOW_ACCEPTING_NEW_COMMISSIONS</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">LATEST_CHAPTER_DROPPING_SOON</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">THE_MANUSCRIPT_IS_ALIVE</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">FOLLOW_ON_X_FOR_UPDATES</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+</div>
+<!-- Duplicated for seamless loop -->
+<div aria-hidden="true" class="inline-block animate-marquee">
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">NOW_ACCEPTING_NEW_COMMISSIONS</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">LATEST_CHAPTER_DROPPING_SOON</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">THE_MANUSCRIPT_IS_ALIVE</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">FOLLOW_ON_X_FOR_UPDATES</span>
+<span class="font-label font-black text-white text-sm tracking-[0.3em] px-4">•</span>
+</div>
+</div>
+<!-- Footer Shell -->
+<footer class="w-full border-t-8 border-zinc-900 dark:border-zinc-50 relative overflow-hidden bg-zinc-100 dark:bg-zinc-900 px-8 py-12 after:content-[''] after:absolute after:inset-0 after:bg-[radial-gradient(#000_1px,transparent_0)] after:[background-size:4px_4px] after:opacity-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold text-zinc-600 dark:text-zinc-400">
+                © 2024 KINETIC_EDITORIAL | ALL RIGHTS RESERVED
+            </div>
+<div class="flex gap-8 font-['Inter'] text-[10px] uppercase tracking-widest font-bold">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">EDITORIAL_NOTES</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">STAFF_CREDITS</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">RESOURCES</a>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 bg-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-xl">share</span>
+</div>
+<div class="w-8 h-8 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-xl">alternate_email</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Custom Animation Styles -->
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+<!-- SVG Filter for Ink Bleed effect -->
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0;">
+<filter id="rough-edge">
+<feturbulence basefrequency="0.04" numoctaves="3" result="noise" type="fractalNoise"></feturbulence>
+<fedisplacementmap in="SourceGraphic" in2="noise" scale="2"></fedisplacementmap>
+</filter>
+</svg>
+</body></html>

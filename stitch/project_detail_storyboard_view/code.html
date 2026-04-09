@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;900&amp;family=Manrope:wght@400;500;700&amp;family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed-variant": "#474746",
+                "surface-container-highest": "#e2e2e2",
+                "tertiary": "#5c5c5c",
+                "on-background": "#1a1c1c",
+                "on-secondary-fixed-variant": "#474747",
+                "inverse-on-surface": "#f0f1f1",
+                "surface-container": "#eeeeee",
+                "on-primary-container": "#fffbff",
+                "on-error-container": "#93000a",
+                "on-tertiary": "#ffffff",
+                "surface": "#f9f9f9",
+                "on-surface": "#1a1c1c",
+                "outline": "#946e6d",
+                "surface-dim": "#dadada",
+                "on-secondary-container": "#646464",
+                "on-tertiary-fixed": "#1b1c1c",
+                "on-secondary-fixed": "#1b1b1b",
+                "secondary-fixed-dim": "#c6c6c6",
+                "on-surface-variant": "#5f3e3e",
+                "primary-fixed-dim": "#ffb3b2",
+                "outline-variant": "#e9bcba",
+                "error-container": "#ffdad6",
+                "on-primary-fixed": "#410008",
+                "error": "#ba1a1a",
+                "on-secondary": "#ffffff",
+                "tertiary-container": "#757474",
+                "background": "#f9f9f9",
+                "primary-fixed": "#ffdad8",
+                "inverse-primary": "#ffb3b2",
+                "on-primary-fixed-variant": "#92001e",
+                "secondary": "#5e5e5e",
+                "secondary-container": "#e2e2e2",
+                "on-primary": "#ffffff",
+                "on-tertiary-container": "#fffcfb",
+                "inverse-surface": "#2f3131",
+                "surface-variant": "#e2e2e2",
+                "surface-bright": "#f9f9f9",
+                "surface-container-lowest": "#ffffff",
+                "primary-container": "#e90036",
+                "secondary-fixed": "#e2e2e2",
+                "surface-container-high": "#e8e8e8",
+                "on-error": "#ffffff",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "surface-tint": "#bf002a",
+                "primary": "#ba0029",
+                "surface-container-low": "#f3f3f4",
+                "tertiary-fixed": "#e4e2e1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0rem",
+                "lg": "0rem",
+                "xl": "0rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Space Grotesk"],
+                "body": ["Manrope"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .manga-panel {
+            clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 2% 100%);
+        }
+        .manga-panel-alt {
+            clip-path: polygon(2% 0%, 100% 5%, 95% 95%, 0% 100%);
+        }
+        .screentone {
+            background-image: radial-gradient(#1a1c1c 1px, transparent 0);
+            background-size: 4px 4px;
+        }
+        .screentone-light {
+            background-image: radial-gradient(rgba(26,28,28,0.1) 1px, transparent 0);
+            background-size: 3px 3px;
+        }
+        .ink-bleed-border {
+            border-image: linear-gradient(to right, #1a1c1c, #ba0029) 1;
+        }
+        .word-balloon {
+            position: relative;
+            background: #fff;
+            border: 3px solid #1a1c1c;
+        }
+        .word-balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #1a1c1c;
+        }
+        .action-lines {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(186, 0, 41, 0.05) 10px,
+                rgba(186, 0, 41, 0.05) 20px
+            );
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full border-b-4 border-zinc-900 dark:border-zinc-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl z-50 flex justify-between items-center px-6 py-4 shadow-[6px_6px_0px_0px_rgba(26,28,28,1)]">
+<div class="text-3xl font-black italic tracking-tighter text-zinc-900 dark:text-zinc-50 underline decoration-4 decoration-[#ba0029] underline-offset-4">
+            KINETIC_EDITORIAL
+        </div>
+<div class="hidden md:flex gap-8 font-['Space_Grotesk'] uppercase tracking-tighter font-bold">
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">ARCHIVE</a>
+<a class="text-[#ba0029] underline decoration-2 underline-offset-8 hover:skew-x-[-12deg] transition-transform duration-75" href="#">WORKS</a>
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">CHAPTERS</a>
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">ABOUT</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 font-headline font-black uppercase tracking-widest border-2 border-on-surface shadow-[4px_4px_0px_0px_rgba(26,28,28,1)] active:translate-y-1 active:translate-x-1 active:shadow-none transition-all">
+            CONTACT_US
+        </button>
+</nav>
+<main class="pt-24 pb-20 max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: The Narrative Panel Flow -->
+<div class="lg:col-span-8 space-y-16">
+<!-- Hero Splash Panel -->
+<section class="relative">
+<div class="absolute -top-4 -left-4 bg-primary text-white font-headline font-black text-6xl md:text-8xl p-4 z-10 -rotate-2 border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(26,28,28,1)]">
+                    CYBER_STREETS
+                </div>
+<div class="w-full aspect-[16/9] border-8 border-on-surface bg-surface-container overflow-hidden relative manga-panel">
+<img class="w-full h-full object-cover grayscale contrast-125 brightness-75" data-alt="cinematic low-angle shot of a futuristic neon city alleyway at night with deep shadows and glowing red light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqR0b_vexRrSqe70DBUrMVqJ8Not54wecQ08HCUgBydV2ykd4sO_nJa_Op2Dh4S_IBcWEjjaD8gIQ3qzhniM1i__1qlHpfisGcc44zieItAZLb_TNla5_emgCX1V24cqNx5l33N0cPGzQIOC8IvDhUvq4Vnao7H8cbv0cj7YuyNisN03eH6oWlpshrvPWAg0-Sxb-KlShpeP0HqjGRH-OqvyZRXUMJ6AXviaGBmAEwe9Cae-V6tx0KDIaj6EBZhXo_oEU53U_z7sM"/>
+<div class="absolute inset-0 screentone opacity-20"></div>
+</div>
+<div class="absolute bottom-4 right-4 word-balloon p-6 max-w-sm">
+<p class="font-headline font-bold text-xl leading-tight uppercase italic">"The city never sleeps. It just reboots in the dark."</p>
+</div>
+</section>
+<!-- Narrative Intro Panel -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div class="bg-on-surface text-surface p-4 inline-block font-headline font-black uppercase tracking-widest">
+                        SCENE 01: THE ORIGIN
+                    </div>
+<div class="relative p-6 border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(186,0,41,1)] bg-surface-container-lowest">
+<div class="screentone-light absolute inset-0 pointer-events-none"></div>
+<p class="font-body text-lg leading-relaxed relative z-10">
+                            The project began as a raw exploration of urban isolation within a hyper-connected society. We wanted to visualize the friction between human intent and machine logic using high-contrast ink-and-paper aesthetics.
+                        </p>
+</div>
+</div>
+<div class="manga-panel-alt overflow-hidden border-4 border-on-surface bg-zinc-200">
+<img class="w-full h-full object-cover" data-alt="extreme close-up of a human eye with digital circuitry reflections on the iris, black and white high contrast manga style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1RnXWH_MLj1D65FAgxl9zXhMy_08W0LZ2owh37ryg1Cmy2NJQfn9k0rZreD0WzU-WNI2zk4NaLuNnCosnJXmRQRWCPiCxxtECbibOZjEd72qIc_HpKYBHapXonROeuPL5XIpWQ88MPphManneyauYSocmNlTXF6k7WY9vxnUJ0-mOu6UyS0m_VibGI43it7sbXdGuDdu2HsqFURaCotzYr9yK9VyRm3TsqWbTT4T3ZbRC1N-Enm1zxWHvyiBtSijpammXg8DPDr8"/>
+</div>
+</div>
+<!-- Full Width Action Panel -->
+<section class="relative py-12">
+<div class="action-lines absolute inset-0 -z-10"></div>
+<div class="border-y-8 border-on-surface py-8">
+<div class="max-w-2xl mx-auto text-center space-y-4">
+<h2 class="font-headline font-black text-5xl uppercase tracking-tighter italic">BREAKING THE_GRID</h2>
+<p class="font-body font-medium text-lg px-8">Implementing a custom layout engine that prioritizes narrative flow over standard symmetrical columns. Every pixel is an ink stroke.</p>
+</div>
+</div>
+</section>
+<!-- Grid Panels -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-2 border-4 border-on-surface aspect-video relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105" data-alt="abstract architectural brutalist concrete buildings with sharp shadows and dramatic sky, graphic editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgFSQLzPnOn0SM6iUT7FPRBtMtZkYTnx65_wppUsBFiT6v398hNLUzie3EbCoE_NbY3U2N9jJzeN2en8yKyoBxjkFV7LU-Obim_3W8cBsRzm9P45INUDSre1Eq_9Sq7jOwUmMTxfGDQuOD3i3-iwBo18c_OkgvJfY64dnvRY8m_uLWGfKMzkE8qNwybm3JUUqL2yrf0hC4qKShZWcQIV7HGUnXxyfcAKeoqb3822dchjXMTkb_5fjsbT9eZ_9m3yy8CQ_nTgqpGss"/>
+<div class="absolute top-0 left-0 bg-primary text-white px-3 py-1 font-headline font-bold text-sm">ENVIRONMENT_STUDY</div>
+</div>
+<div class="border-4 border-on-surface aspect-square flex items-center justify-center bg-on-surface text-surface overflow-hidden">
+<div class="text-8xl font-black italic -rotate-12 opacity-50">BOOM</div>
+</div>
+<div class="border-4 border-on-surface aspect-square screentone p-4">
+<div class="h-full w-full bg-white border-2 border-on-surface p-4 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl">dynamic_feed</span>
+<p class="font-label font-black text-xs uppercase tracking-tighter">Real-time data visualization layer</p>
+</div>
+</div>
+<div class="md:col-span-2 border-4 border-on-surface relative overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="vintage mainframe computer hardware close-up, complex wires and electronic components in high detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqU8iBSfwgpXgPPOpd9fJVfCQNWqNTdJXHHX5QzEEzRszXiP21eYb6jza_O98inksgAyqUEd6KBG1n8hNz6giSreSYCAtsNfKrGGaA7eWSwpZE1RYN3uVpd5crpqePhRZInEPwowiaW-OLQq1VpiYhLQNwqAUBbcphgqsFmSnNSiOnlTC0B037ZhHjUtZ3PKAjebW_zr5-zTnQ0JByodyxT7O3qaAEiyuk3NF2GQ3aTkwGDGXpKxALioV_Kk4LhITQvm57JdjyJsc"/>
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="bg-white/90 backdrop-blur-sm border-2 border-on-surface p-6 shadow-[6px_6px_0px_0px_rgba(26,28,28,1)]">
+<h3 class="font-headline font-black text-2xl mb-2">TECHNICAL_CORE</h3>
+<p class="font-body text-sm">Building a robust architecture that handles high-frequency updates while maintaining a constant 60fps cinematic frame rate.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Project Sidebar / Stats Bio -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="sticky top-28 space-y-8">
+<!-- Character-style Stat Card -->
+<div class="border-8 border-on-surface bg-white shadow-[12px_12px_0px_0px_rgba(26,28,28,1)] relative overflow-hidden">
+<div class="bg-on-surface text-surface p-4 font-headline font-black text-2xl uppercase italic tracking-widest flex justify-between items-center">
+                        FILE_NO: 0822
+                        <span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<div class="p-6 space-y-6">
+<div class="flex gap-4">
+<div class="w-24 h-24 border-4 border-on-surface shrink-0 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="portrait of a creative professional in a turtleneck with dramatic rim lighting, black and white professional photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbj4FcurWUafSONgOKnbDtGmoh4-pd3F8awrJQK0YvMGnHWyD5PFn4KeJIAVjJWLxIkBmgdaVsTP_oNX_-PTIKvz9BP6v4Ph47kFDlp_uTPQ88DL5onPBFAxnh5IFm7ZX32IY932VDx-qrbYPsyIVTtuADhx-XwOn-oOoSAU9XDLW7SpFcK_ah_jpWpDtg7Z9H-RT0zPx3KeO4xYqOSoZA4Yh_xDel_ylo29dNZ3_dWfIlREITmY6djaZhaBQrfkTACRN2ZGWP2EY"/>
+</div>
+<div>
+<h4 class="font-headline font-black text-xl uppercase tracking-tighter">LEAD_OPERATIVE</h4>
+<p class="text-primary font-bold">K. EDITORIAL TEAM</p>
+<div class="flex mt-2 gap-1">
+<div class="w-3 h-3 bg-primary"></div>
+<div class="w-3 h-3 bg-primary"></div>
+<div class="w-3 h-3 bg-primary"></div>
+<div class="w-3 h-3 border border-on-surface"></div>
+<div class="w-3 h-3 border border-on-surface"></div>
+</div>
+</div>
+</div>
+<hr class="border-t-2 border-on-surface border-dashed"/>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label font-bold text-[10px] uppercase text-zinc-500">ASSIGNMENT</label>
+<p class="font-headline font-bold uppercase text-sm">CONCEPT ART / UX</p>
+</div>
+<div class="space-y-1">
+<label class="font-label font-bold text-[10px] uppercase text-zinc-500">DEPLOYMENT</label>
+<p class="font-headline font-bold uppercase text-sm">OCT 2024</p>
+</div>
+<div class="space-y-1">
+<label class="font-label font-bold text-[10px] uppercase text-zinc-500">SECTOR</label>
+<p class="font-headline font-bold uppercase text-sm">NEO_BRUTALISM</p>
+</div>
+<div class="space-y-1">
+<label class="font-label font-bold text-[10px] uppercase text-zinc-500">STATUS</label>
+<p class="font-headline font-bold uppercase text-sm text-green-600">MISSION_COMPLETE</p>
+</div>
+</div>
+<div class="bg-surface-container p-4 border-l-8 border-primary">
+<label class="font-label font-black text-[10px] uppercase block mb-1">TECH_STACK</label>
+<div class="flex flex-wrap gap-2">
+<span class="bg-on-surface text-surface text-[10px] font-bold px-2 py-0.5">REACT.JS</span>
+<span class="bg-on-surface text-surface text-[10px] font-bold px-2 py-0.5">THREE.JS</span>
+<span class="bg-on-surface text-surface text-[10px] font-bold px-2 py-0.5">TAILWIND</span>
+<span class="bg-on-surface text-surface text-[10px] font-bold px-2 py-0.5">GSAP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Ticker -->
+<div class="border-4 border-on-surface bg-zinc-900 overflow-hidden py-2 group">
+<div class="flex whitespace-nowrap animate-marquee">
+<span class="text-white font-label font-black text-xs uppercase mx-4">SYSTEM_ONLINE // DATA_STREAM_ACTIVE // SYNCING_REALITY // SYSTEM_ONLINE // DATA_STREAM_ACTIVE // SYNCING_REALITY</span>
+</div>
+</div>
+<!-- Call to Action Panel -->
+<div class="border-4 border-on-surface p-6 bg-primary text-white space-y-4">
+<h5 class="font-headline font-black text-2xl uppercase tracking-tighter leading-none italic">NEED_A_MISSION_PLAN?</h5>
+<p class="font-body text-sm font-medium">We are currently accepting new deployments for Q1 2025.</p>
+<button class="w-full bg-white text-on-surface font-headline font-black py-3 uppercase tracking-widest border-2 border-on-surface shadow-[4px_4px_0px_0px_rgba(26,28,28,1)] active:translate-y-1 active:translate-x-1 active:shadow-none transition-all">
+                        INITIATE_CONTACT
+                    </button>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer Anchor -->
+<footer class="w-full border-t-8 border-zinc-900 dark:border-zinc-50 relative overflow-hidden bg-zinc-100 dark:bg-zinc-900 after:content-[''] after:absolute after:inset-0 after:bg-[radial-gradient(#000_1px,transparent_0)] after:[background-size:4px_4px] after:opacity-10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-6 relative z-10">
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold text-zinc-600 dark:text-zinc-400">
+                © 2024 KINETIC_EDITORIAL | ALL RIGHTS RESERVED
+            </div>
+<div class="flex gap-8 font-['Inter'] text-[10px] uppercase tracking-widest font-bold">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">EDITORIAL_NOTES</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">STAFF_CREDITS</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">RESOURCES</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">rss_feed</span>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+</body></html>

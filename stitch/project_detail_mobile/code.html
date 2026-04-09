@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#fffcfb",
+                    "surface-dim": "#dadada",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-primary-container": "#fffbff",
+                    "primary-container": "#e90036",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#646464",
+                    "secondary": "#5e5e5e",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#e9bcba",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "primary-fixed": "#ffdad8",
+                    "on-background": "#1a1c1c",
+                    "background": "#f9f9f9",
+                    "primary": "#ba0029",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#5f3e3e",
+                    "tertiary": "#5c5c5c",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed": "#410008",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-container": "#757474",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#ffb3b2",
+                    "secondary-container": "#e2e2e2",
+                    "surface-variant": "#e2e2e2",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#bf002a",
+                    "on-primary-fixed-variant": "#92001e",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2e1",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container": "#eeeeee",
+                    "outline": "#946e6d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .manga-grid-dots {
+            background-image: radial-gradient(circle, #1a1c1c 1px, transparent 1px);
+            background-size: 12px 12px;
+            opacity: 0.1;
+        }
+        .ink-bleed-right {
+            clip-path: polygon(0 0, 100% 5%, 95% 100%, 0 95%);
+        }
+        .ink-bleed-left {
+            clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 92%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 py-2 bg-opacity-80 backdrop-blur-md bg-[#f9f9f9] border-b-4 border-black dark:bg-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="menu">menu</span>
+<h1 class="font-['Space_Grotesk'] uppercase tracking-tighter text-2xl font-black italic text-black dark:text-white">KINETIC</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="search">search</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-12 px-4 max-w-md mx-auto">
+<!-- Hero Section: The Splash Panel -->
+<section class="relative mb-12">
+<div class="border-4 border-black dark:border-white p-1 bg-white relative z-10 shadow-[8px_8px_0px_0px_rgba(186,0,41,1)] overflow-hidden ink-bleed-right">
+<img class="w-full h-96 object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" data-alt="cinematic low angle shot of neon-lit futuristic street with high contrast shadows and gritty urban texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSteyRSF2n_zxmKsT_G2vyZ2CGYB6aNS9lTPTiKR4sfohAhrGMftF2kTk3Jj2qZYPyAHYrxRmVxBfJj4KkJCB0WATUkRUyw18gugthCHd1W0qP7-Msolj9uQ3WvHZXyO-Knd9CMkikEjNa_UWPAcnAFWgR8BUIEiimIkbdqzucGjbGe_Iv8mOD2pQSB1nU0YZgpNqzujgyUvJ0HL1xBrBa3qVoEQR2O1KPjGLfAgyVGpMFvM3ahOMQLEZB5In7Bt5MwxaErk0xA00"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<h2 class="font-headline text-5xl font-black text-white italic uppercase tracking-tighter -rotate-2 origin-bottom-left leading-none">
+                        CYBER_STREETS
+                    </h2>
+</div>
+</div>
+<!-- Decorative Screentone Element -->
+<div class="absolute -top-4 -right-2 w-24 h-24 manga-grid-dots -z-10"></div>
+</section>
+<!-- Chapter: Origin -->
+<section class="mb-16">
+<div class="flex items-baseline gap-2 mb-6">
+<span class="bg-primary text-white font-headline px-2 py-0.5 text-sm font-bold">01</span>
+<h3 class="font-headline text-3xl font-extrabold uppercase tracking-tight text-on-surface">Origin</h3>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="relative bg-surface-container-lowest border-2 border-black p-6 ink-bleed-left">
+<p class="text-lg leading-relaxed font-medium mb-4">
+                        Born from the friction of <span class="text-primary font-bold">NEO-TOKYO</span> nights. We sought to map the invisible pulse of the subterranean grid.
+                    </p>
+<div class="h-1 w-full bg-black mb-4"></div>
+<p class="font-body text-sm text-secondary italic">
+                        "The architecture of the future isn't built on steel, but on the data flowing through the cracks."
+                    </p>
+</div>
+<div class="border-l-8 border-primary pl-4 py-2">
+<h4 class="font-label text-xs font-black uppercase tracking-widest text-primary mb-1">Constraints</h4>
+<p class="font-headline text-xl font-bold">Zero latency. Infinite density. High contrast mortality.</p>
+</div>
+</div>
+</section>
+<!-- Chapter: Process (Storyboard Grid) -->
+<section class="mb-16">
+<div class="flex items-baseline gap-2 mb-6">
+<span class="bg-primary text-white font-headline px-2 py-0.5 text-sm font-bold">02</span>
+<h3 class="font-headline text-3xl font-extrabold uppercase tracking-tight text-on-surface">Process</h3>
+</div>
+<div class="flex flex-col gap-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="border-4 border-black aspect-square overflow-hidden bg-black flex items-center justify-center relative">
+<img class="w-full h-full object-cover opacity-80 mix-blend-screen" data-alt="abstract hand drawn ink sketches of circuit boards and street maps with heavy black outlines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_GlT3SVrS2jmenn4DxqYZsmlVtmrn7SBc6mIdcMHkMrZpqXlchhG5cNKI3G4AaCUkQQt3q_oThnFaBOQUy7L3PhRC1Y8-eF34rWhdHg0uXY1ATCrqPRCm14IlG7xqJxWXoYcgKVNRAXU6N8qw_OsuvtDAP7_Z6mCUAcmOjxeY7LD_ZsX0aKY4zwRLViqy7wMaFX1A1_uyHhZWcIJcBazIrTcMCMwLK9I0trZZAkpxgMZLMj9oFuHMuyGqOSN4CkvFCfLAPFnGnNA"/>
+<span class="absolute top-2 left-2 font-headline text-xs font-bold text-white bg-black px-1 uppercase">Sketch_01</span>
+</div>
+<div class="flex flex-col justify-center border-4 border-black p-3 bg-secondary-container manga-grid-dots">
+<span class="font-label text-[10px] uppercase font-black mb-1">Status: Iterating</span>
+<p class="font-body text-xs font-bold leading-tight">Iterative prototyping through skeletal wireframes and ink-wash visualizations.</p>
+</div>
+</div>
+<div class="border-4 border-black p-4 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-full bg-primary -mr-8 rotate-12 -z-0 opacity-20"></div>
+<p class="font-headline text-2xl font-black italic relative z-10 leading-none mb-2">DYNAMIC MOTION BLUR</p>
+<p class="font-body text-sm relative z-10">We applied a custom "frame-skip" algorithm to ensure that every interaction feels like a hard-cut in a high-octane sequence.</p>
+</div>
+<div class="border-4 border-black h-48 overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-105" data-alt="coding workstation with multiple monitors displaying lines of code in a dark room with red accent lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRilqbZ8oy6vgTSYF07iGt_CO7pKh4rmyXqcLgcrLFiUZzdeFO4zw794kOxM-9pbmmGph021YGBnJjFhI-dg9t4K9UmqVmvFj3TIFM_groYBeaNFjMZzcOENwmmzc3SeS-vRcsEFmu5wEh-xbSiU_bFWbMKLkgKHzIGzS8DwRd0U4A0mMlm1MAZwTUcb-FfBFaPfXCMKb93jqr-q7wqT5osiEsRWOzjVxj-71NvGDAzWaLnhJ-cnPciTwQmyBpvsr-PrZr2g9wj4"/>
+</div>
+</div>
+</section>
+<!-- Chapter: Technical_Core (Technical Specs Panel) -->
+<section class="mb-16">
+<div class="flex items-baseline gap-2 mb-6">
+<span class="bg-primary text-white font-headline px-2 py-0.5 text-sm font-bold">03</span>
+<h3 class="font-headline text-3xl font-extrabold uppercase tracking-tight text-on-surface">Technical_Core</h3>
+</div>
+<div class="bg-black text-white p-6 shadow-[12px_12px_0px_0px_rgba(232,232,232,1)]">
+<div class="flex flex-col gap-6">
+<div class="border-b border-white/20 pb-4">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label text-[10px] text-primary font-black uppercase">Stack_Layer_01</span>
+<span class="font-label text-[10px] text-white/40">READY</span>
+</div>
+<h4 class="font-headline text-xl font-bold uppercase tracking-tighter">Neural Interface API</h4>
+</div>
+<div class="border-b border-white/20 pb-4">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label text-[10px] text-primary font-black uppercase">Stack_Layer_02</span>
+<span class="font-label text-[10px] text-white/40">STABLE</span>
+</div>
+<h4 class="font-headline text-xl font-bold uppercase tracking-tighter">Vector Displacement Engine</h4>
+</div>
+<div class="border-b border-white/20 pb-4">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label text-[10px] text-primary font-black uppercase">Stack_Layer_03</span>
+<span class="font-label text-[10px] text-white/40">ENCRYPTED</span>
+</div>
+<h4 class="font-headline text-xl font-bold uppercase tracking-tighter">Ghost-In-The-Shell Security</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Section -->
+<section class="mt-20">
+<button class="w-full bg-primary text-white font-headline font-black text-2xl uppercase italic py-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:-translate-x-1 active:-translate-y-1 transition-transform">
+                VIEW LIVE DEPLOYMENT
+            </button>
+<div class="mt-4 flex justify-between items-center px-2">
+<span class="font-label text-xs uppercase tracking-widest text-secondary">Project_Hash: 928X-KJ9</span>
+<span class="material-symbols-outlined text-primary" data-icon="share">share</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black text-white p-8 mt-12 border-t-8 border-[#ba0029] flex flex-col items-center text-center gap-6">
+<div class="font-['Space_Grotesk'] text-3xl font-black italic text-white">KINETIC</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors" href="#">Terms</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors" href="#">Socials</a>
+</div>
+<p class="font-['Inter'] text-[10px] uppercase tracking-widest text-white/40">© 2024 KINETIC EDITORIAL. NO MERCY.</p>
+</footer>
+<!-- FAB: Contextual to "Project Detail" - Return to Archive -->
+<button class="fixed bottom-6 right-6 bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(186,0,41,1)] active:translate-x-0.5 active:translate-y-0.5 transition-all z-40">
+<span class="material-symbols-outlined text-black font-bold" data-icon="inventory_2">inventory_2</span>
+</button>
+</body></html>

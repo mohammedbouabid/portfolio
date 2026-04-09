@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id        Int     @id @default(1)
+  name      String
+  alias     String
+  title     String
+  location  String
+  email     String
+  phone     String
+  github    String
+  linkedin  String
+  summary   String
+  manifesto String
+  portrait  String
+}
+
+model Project {
+  id         Int     @id @default(autoincrement())
+  slug       String  @unique
+  title      String
+  category   String
+  role       String
+  period     String
+  stack      String  // JSON string[]
+  summary    String
+  problem    String
+  approach   String
+  outcome    String
+  cover      String
+  comingSoon Boolean @default(false)
+  order      Int     @default(0)
+}
+
+model Experience {
+  id       Int    @id @default(autoincrement())
+  company  String
+  role     String
+  period   String
+  location String
+  bullets  String // JSON string[]
+  stack    String // JSON string[]
+  order    Int    @default(0)
+}
+
+model Education {
+  id     Int    @id @default(autoincrement())
+  period String
+  title  String
+  school String
+  order  Int    @default(0)
+}
+
+model Skill {
+  id    Int    @id @default(autoincrement())
+  group String // languages | frameworks | databases | tools | ecommerce | personal
+  label String
+  order Int    @default(0)
+}
+
+model Certification {
+  id           Int     @id @default(autoincrement())
+  label        String
+  organization String?
+  order        Int     @default(0)
+}
+
+model Language {
+  id    Int    @id @default(autoincrement())
+  name  String
+  level String
+  order Int    @default(0)
+}
+
+model Interest {
+  id    Int    @id @default(autoincrement())
+  label String
+  order Int    @default(0)
+}

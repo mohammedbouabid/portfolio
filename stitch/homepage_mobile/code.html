@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#fffcfb",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-primary-container": "#fffbff",
+                        "primary-container": "#e90036",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#646464",
+                        "secondary": "#5e5e5e",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#e9bcba",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "primary-fixed": "#ffdad8",
+                        "on-background": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "primary": "#ba0029",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "on-surface-variant": "#5f3e3e",
+                        "tertiary": "#5c5c5c",
+                        "surface": "#f9f9f9",
+                        "on-primary-fixed": "#410008",
+                        "inverse-surface": "#2f3131",
+                        "tertiary-container": "#757474",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-primary": "#ffb3b2",
+                        "secondary-container": "#e2e2e2",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#bf002a",
+                        "on-primary-fixed-variant": "#92001e",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e4e2e1",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container": "#eeeeee",
+                        "outline": "#946e6d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .screentone {
+            background-image: radial-gradient(#1a1c1c 1px, transparent 0);
+            background-size: 4px 4px;
+            opacity: 0.1;
+        }
+        .hard-shadow {
+            box-shadow: 6px 6px 0px 0px rgba(26, 28, 28, 1);
+        }
+        .hard-shadow-primary {
+            box-shadow: 6px 6px 0px 0px rgba(186, 0, 41, 1);
+        }
+        .manga-panel-clip {
+            clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 2% 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 py-2 bg-opacity-80 backdrop-blur-md bg-[#f9f9f9] dark:bg-black border-b-4 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,0,41,1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="menu">menu</span>
+<h1 class="text-2xl font-black italic text-black dark:text-white font-headline uppercase tracking-tighter">KINETIC</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="search">search</span>
+</div>
+</header>
+<!-- Action Ticker (Custom Component) -->
+<div class="mt-14 w-full bg-black text-white py-1 overflow-hidden whitespace-nowrap border-b-2 border-primary">
+<div class="flex animate-[marquee_20s_linear_infinite] inline-block">
+<span class="font-label text-xs uppercase tracking-widest px-4">New Release: VOL. 04 "THE BLADE" OUT NOW • </span>
+<span class="font-label text-xs uppercase tracking-widest px-4">KINETIC EDITORIAL SYNDICATE • </span>
+<span class="font-label text-xs uppercase tracking-widest px-4">ART BY SHINICHIRO • </span>
+<span class="font-label text-xs uppercase tracking-widest px-4">SYSTEM STATUS: NOMINAL • </span>
+<span class="font-label text-xs uppercase tracking-widest px-4">New Release: VOL. 04 "THE BLADE" OUT NOW • </span>
+</div>
+</div>
+<main class="relative pb-24">
+<!-- Hero Section -->
+<section class="relative px-4 pt-8 pb-12 overflow-hidden">
+<div class="absolute -top-10 -right-10 opacity-10 rotate-12 pointer-events-none">
+<h2 class="font-headline text-9xl font-black text-on-surface">斬</h2>
+</div>
+<div class="relative z-10">
+<div class="inline-block bg-primary text-white font-headline font-bold uppercase text-xs px-2 py-1 mb-4 -rotate-1">
+                    ESTABLISHED 2024
+                </div>
+<h2 class="font-headline text-6xl font-black leading-[0.9] tracking-tighter uppercase mb-6 flex flex-col">
+<span>KINETIC</span>
+<span class="text-primary italic ml-4">EDITORIAL</span>
+</h2>
+<p class="font-body text-lg font-medium leading-tight max-w-[85%] border-l-4 border-black pl-4 mb-8">
+                    Pushing the boundaries of digital narrative through raw energy and ink-stained precision.
+                </p>
+<button class="bg-primary text-on-primary font-headline font-black uppercase text-xl px-8 py-4 border-2 border-on-surface hard-shadow flex items-center gap-3 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
+                    START READING
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- SFX Overlay Overlay -->
+<div class="absolute top-1/2 right-0 translate-x-1/4 -translate-y-1/2 opacity-20 pointer-events-none scale-150">
+<img alt="Action manga sfx" class="w-64 h-64 grayscale" data-alt="Hand-drawn aggressive manga speed lines and Japanese sound effects ink splash on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNvFANZKsj6RXjARBAqrT_5bycupjh4cmhMPt0tqDfUjplOkUjg3uZ_ehAt7kRqdD7NUak72McblMKKqZR_afdluDyiBTU71puZ8khrAXa-588WbABdaUrGhTHMutXv2Gbk_6fdLuZmh_SrTYmLrNLB4YLkcZ0MsTXE8-TMITM-ygQE8KMWXNJaT2qMJ45MMPW9h-i9F40y_Ay0VS4AKo1GcjlGLUnViHSAYjax3EXywYXCLQyNSClvprjy5r7PtRZy8Z_5xJwS_A"/>
+</div>
+</section>
+<!-- Selected Works (Manga Grid) -->
+<section class="px-4 py-8 bg-surface-container-low relative">
+<div class="screentone absolute inset-0 pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-headline font-black text-3xl uppercase italic leading-none border-b-8 border-primary">SELECTED_WORKS</h3>
+<span class="font-label text-[10px] font-black uppercase opacity-40">VIEW ALL // 08</span>
+</div>
+<!-- Panel 1: Vertical Focus -->
+<div class="mb-12 group">
+<div class="relative border-4 border-black bg-white hard-shadow overflow-hidden">
+<div class="absolute top-2 right-2 z-20 bg-black text-white px-3 py-1 font-headline font-bold text-sm -rotate-2">
+                            VOL. 01
+                        </div>
+<div class="h-[400px] w-full bg-surface-container overflow-hidden">
+<img alt="Work cover" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-110 transition-transform duration-500" data-alt="Intense high-contrast manga panel featuring a cybernetic character in rain, cinematic lighting, sharp ink strokes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjURuv44e93w4SZo0nuntrSGLO2s9jJ-ftnssTMA5ypw_QH5iIMuikPCWZ2OC3WD2tkik5S8yz1SCbJsxbC0b2WdpDbH95rMIjNfUMMTmDd04IwOfgxYEMeJjsuOdrKiUjyQwFiNt_x5Cdu-Cxqqn6zHei_f76gEBrCya6NG_8tHHnS-vi0iIEJgNMz-ELp_pps04GIWW0mwyey1mSc4AHumLnjl-1LZIQPJp3UJhjjBZhjYBHcgTiV84P_qLTXqIVVuiMRlPLdVI"/>
+</div>
+<div class="p-4 bg-white border-t-4 border-black">
+<h4 class="font-headline font-black text-2xl uppercase mb-1">NEON_DRIFT</h4>
+<p class="font-body text-sm text-secondary font-semibold uppercase tracking-tighter">Cyberpunk // Action // Seinen</p>
+</div>
+</div>
+</div>
+<!-- Panel Grid: Asymmetric -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Panel 2 -->
+<div class="relative border-4 border-black bg-white hard-shadow overflow-hidden aspect-[3/4]">
+<img alt="Work cover" class="w-full h-full object-cover grayscale contrast-150" data-alt="Dynamic manga action close-up of a sword clash, speed lines, high contrast black and white ink style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfub96dI0ZeuwfCWrpQSP3diO0xQvVeFO7qWSWLTLLLVG9Nq9Ul6FSEwfiiTST90cwIG4LLyMcObKdlavRffxVvo4tr5T2OcId22ozvDt2fGUs2a2tHqXXhcN2ggSasEtN_agJtDUzzIBPcaiHhbAUYszpvFnHk9QGIoHLhhUtx0mb691MHQlf03qIgwHKPNnrNFg7vIvV_pmWmfw2b45Tevtt3KCjs4eC5Q_WvXjCPRbqZG571C_N-ZqP5mlT63ASgmTHY4TqAOQ"/>
+<div class="absolute bottom-0 left-0 right-0 p-2 bg-white border-t-2 border-black">
+<h4 class="font-headline font-bold text-sm uppercase">VOID_RUN</h4>
+</div>
+</div>
+<!-- Panel 3 -->
+<div class="relative border-4 border-black bg-white hard-shadow overflow-hidden aspect-[3/4] mt-6">
+<img alt="Work cover" class="w-full h-full object-cover grayscale" data-alt="Atmospheric manga landscape of a futuristic Tokyo with heavy screentone textures and ink droplets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhBqXrHVVs28vgEy6Op98pdrIS1BJB654ptAmdcqIkah3dBkSW2ZFRBqsmvJUXHQGlB8CNnknZ0GIZ29lrUsIeKEh5bh5PRmeLZGujQ9qo6qPnjdkyvjXijYT48YJ6Vv_VWObNF-6B2Y0B3U8TXwXVZuCi-Jz7OoCGILlsn_2hINL10IuJKndy8nodz2g6ps4x6ulvsRA6dh-nNk2XpuLm1r3r66_D7cMPA-RbJTfq3ajHi5jwSMYJZEJfQn7hJ4WLujQh0f3DLqw"/>
+<div class="absolute bottom-0 left-0 right-0 p-2 bg-white border-t-2 border-black">
+<h4 class="font-headline font-bold text-sm uppercase">LAST_ECHO</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="px-4 py-12">
+<div class="bg-black text-white p-6 border-4 border-primary relative overflow-hidden">
+<div class="screentone absolute inset-0 opacity-20"></div>
+<div class="relative z-10">
+<h3 class="font-headline font-black text-4xl uppercase leading-[0.8] mb-4 italic">JOIN THE<br/>SYNDICATE</h3>
+<p class="font-body text-sm mb-6 opacity-80 uppercase tracking-widest font-bold">Get first look at new chapters and exclusive digital art drops.</p>
+<div class="flex flex-col gap-3">
+<input class="bg-transparent border-b-4 border-white focus:border-primary focus:ring-0 text-white font-headline uppercase placeholder:text-white/30 py-3" placeholder="EMAIL_ADDRESS" type="email"/>
+<button class="bg-primary text-white font-headline font-black py-4 uppercase tracking-tighter hover:bg-white hover:text-black transition-colors">
+                            SUBSCRIBE
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- NavigationDrawer (Simulated as Mobile Bottom Nav) -->
+<nav class="fixed bottom-0 w-full bg-[#f9f9f9] dark:bg-black border-t-4 border-black dark:border-white z-50 flex justify-around items-center h-16 shadow-[0px_-4px_0px_0px_rgba(186,0,41,1)]">
+<a class="flex flex-col items-center justify-center gap-1 text-[#ba0029]" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-label text-[10px] font-black uppercase">Manga</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-black dark:text-white opacity-40" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-label text-[10px] font-black uppercase">Portfolio</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-black dark:text-white opacity-40" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label text-[10px] font-black uppercase">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-black dark:text-white opacity-40" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label text-[10px] font-black uppercase">Contact</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-black dark:bg-[#1a1c1c] w-full border-t-8 border-[#ba0029] flex flex-col items-center text-center p-8 pb-32 gap-4">
+<div class="text-white font-bold font-headline text-xl italic tracking-tighter uppercase">KINETIC EDITORIAL</div>
+<div class="flex gap-6">
+<a class="text-white/60 font-label text-xs uppercase tracking-widest hover:text-white transition-colors" href="#">Terms</a>
+<a class="text-white/60 font-label text-xs uppercase tracking-widest hover:text-white transition-colors" href="#">Privacy</a>
+<a class="text-white/60 font-label text-xs uppercase tracking-widest hover:text-white transition-colors" href="#">Socials</a>
+</div>
+<p class="text-[#ba0029] font-label text-[10px] uppercase tracking-[0.2em] font-black mt-4">© 2024 KINETIC EDITORIAL. NO MERCY.</p>
+</footer>
+</body></html>

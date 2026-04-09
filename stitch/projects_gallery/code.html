@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PROJECTS GALLERY | KINETIC_EDITORIAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;family=Inter:wght@400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .halftone {
+            background-image: radial-gradient(#1a1c1c 1px, transparent 0);
+            background-size: 4px 4px;
+        }
+        .ink-bleed {
+            clip-path: polygon(0% 0%, 100% 2%, 98% 100%, 0% 98%);
+        }
+        .manga-panel-shadow {
+            box-shadow: 8px 8px 0px 0px #1a1c1c;
+        }
+        .speech-bubble {
+            position: relative;
+            background: #ffffff;
+            border: 3px solid #1a1c1c;
+        }
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+            border-width: 15px 15px 0 0;
+            border-style: solid;
+            border-color: #1a1c1c transparent transparent transparent;
+        }
+        .perspective-tilt {
+            transform: perspective(1000px) rotateY(-2deg) rotateX(1deg);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#474746",
+                    "surface-container-highest": "#e2e2e2",
+                    "tertiary": "#5c5c5c",
+                    "on-background": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#474747",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container": "#eeeeee",
+                    "on-primary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "on-surface": "#1a1c1c",
+                    "outline": "#946e6d",
+                    "surface-dim": "#dadada",
+                    "on-secondary-container": "#646464",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#5f3e3e",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "outline-variant": "#e9bcba",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#410008",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#757474",
+                    "background": "#f9f9f9",
+                    "primary-fixed": "#ffdad8",
+                    "inverse-primary": "#ffb3b2",
+                    "on-primary-fixed-variant": "#92001e",
+                    "secondary": "#5e5e5e",
+                    "secondary-container": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#fffcfb",
+                    "inverse-surface": "#2f3131",
+                    "surface-variant": "#e2e2e2",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#e90036",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#bf002a",
+                    "primary": "#ba0029",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary-fixed": "#e4e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0rem",
+                    "lg": "0rem",
+                    "xl": "0rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-white">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full border-b-4 border-zinc-900 dark:border-zinc-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[6px_6px_0px_0px_rgba(26,28,28,1)] flex justify-between items-center px-6 py-4 z-50">
+<div class="text-3xl font-black italic tracking-tighter text-zinc-900 dark:text-zinc-50 underline decoration-4 decoration-[#ba0029] underline-offset-4">
+            KINETIC_EDITORIAL
+        </div>
+<div class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] uppercase tracking-tighter font-bold">
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">ARCHIVE</a>
+<a class="text-[#ba0029] underline decoration-2 underline-offset-8 hover:skew-x-[-12deg] transition-transform duration-75" href="#">WORKS</a>
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">CHAPTERS</a>
+<a class="text-zinc-900 dark:text-zinc-400 hover:text-[#ba0029] hover:skew-x-[-12deg] transition-transform duration-75" href="#">ABOUT</a>
+</div>
+<button class="bg-[#ba0029] text-white px-6 py-2 font-bold font-['Space_Grotesk'] uppercase border-2 border-zinc-900 shadow-[4px_4px_0px_0px_rgba(26,28,28,1)] transition-all steps(4) active:translate-y-1 active:translate-x-1">
+            CONTACT_US
+        </button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-20 px-4 md:px-12 max-w-7xl mx-auto overflow-hidden">
+<!-- Header Section: Manga Table of Contents Style -->
+<header class="mb-16 border-l-8 border-primary pl-6 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<h1 class="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none -rotate-1 origin-left">
+                    WORKS<br/><span class="text-primary italic">GALLERY.</span>
+</h1>
+<p class="font-label text-xs tracking-widest uppercase mt-4 text-zinc-500">Vol. 04 // Collected Sequential Narratives</p>
+</div>
+<!-- Manga TOC Style Filter -->
+<div class="bg-surface-container border-4 border-on-surface p-4 manga-panel-shadow flex flex-col gap-2 min-w-[280px]">
+<div class="font-headline font-bold border-b-2 border-on-surface pb-1 text-sm italic">TABLE OF CONTENTS</div>
+<nav class="flex flex-col font-label text-[10px] tracking-tighter font-black">
+<a class="flex justify-between items-center hover:bg-primary hover:text-white p-1 group" href="#">
+<span>01_EDITORIAL_PHOTOGRAPHY</span>
+<span class="font-bold">PAGE 012</span>
+</a>
+<a class="flex justify-between items-center bg-on-surface text-surface p-1" href="#">
+<span>02_DIGITAL_ILLUSTRATION</span>
+<span class="font-bold">PAGE 034</span>
+</a>
+<a class="flex justify-between items-center hover:bg-primary hover:text-white p-1" href="#">
+<span>03_BRAND_NARRATIVES</span>
+<span class="font-bold">PAGE 058</span>
+</a>
+<a class="flex justify-between items-center hover:bg-primary hover:text-white p-1" href="#">
+<span>04_MOTION_MANUSCRIPT</span>
+<span class="font-bold">PAGE 089</span>
+</a>
+</nav>
+</div>
+</header>
+<!-- Manga Spread Layout: Bento Grid with Asymmetry -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Column 1 & 2: Large Vertical Panel -->
+<div class="md:col-span-7 group relative">
+<div class="absolute -top-4 -left-4 z-10 speech-bubble px-4 py-2 font-headline font-extrabold italic text-2xl uppercase skew-x-[-12deg]">
+                    CYBER_PUNK_2077
+                </div>
+<div class="border-8 border-on-surface bg-zinc-200 overflow-hidden manga-panel-shadow h-[600px] relative">
+<img alt="Cinematic neon cityscape with high contrast lighting and deep shadows in a manga frame" class="w-full h-full object-cover grayscale contrast-150 transition-transform duration-500 group-hover:scale-110" data-alt="Cinematic neon cityscape at night with high contrast monochromatic lighting, deep shadows, and gritty urban textures in a manga frame style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOy1_mUAEYGzoUQfs7JJp8q4XGJrvxQDlwrH1JIdbbPKbA6zhu26xrXVVUi1AZ3GVKANC4TqpHY81v3MqBwCeR4aatRBhplSE2mlH0Zjy8_NLBlfPWlWRIjrayUy2jPe8ut_xNYSbLmjMCsHpXgO4BHcrAvADZrBxyZkikm0hF4tH4WPp70vvdffsDJBLgCrGVJ6jEPUW8dQdpa3yUEgQdqqMmGQj7Qb_f9MJID_zRyy4JwDOL3VQ0FxoTWDzPIXc7lPathgW3nE4"/>
+<div class="absolute inset-0 halftone opacity-30 pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 bg-on-surface text-surface px-4 py-2 font-label text-xs uppercase font-bold tracking-widest">
+                        Case Study: Night City Editorial
+                    </div>
+</div>
+</div>
+<!-- Column 3: Stacked Panels -->
+<div class="md:col-span-5 flex flex-col gap-12">
+<!-- Panel 2 -->
+<div class="group relative md:ml-[-40px] z-20">
+<div class="border-[12px] border-on-surface bg-zinc-100 overflow-hidden manga-panel-shadow h-[300px] -rotate-2 relative">
+<img alt="Portrait of a modern samurai in high contrast black and white photography" class="w-full h-full object-cover grayscale mix-blend-multiply group-hover:scale-105 transition-transform" data-alt="Intense high-contrast black and white portrait of a modern figure with samurai-inspired tech gear, sharp lighting, and dramatic ink-wash effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYbo5Iz49DDcpl6bjPCG4PInDwYiP9FmGntrQrJeJMVa9GjyWR1I95o1lvfnlwKLBNuXUckV4WHh-V9kCLcUDhdsAoElAQHtcwATg70BeYwtH5QhtaeyJ18LQRZtZnVvIZYD52yw7fhBwrVOemdvpM_VrLbiT8psREqx0ee7ElL10yEHZVxRBA3_QunutX1wsy7RJ-C3WNXWoijnHjKYuSf6zOcl_jHFphGY3JFD4DR7DuM8aDqqZNb56YK3y5h8089CoNIIv8R0c"/>
+<div class="absolute inset-0 halftone opacity-20 pointer-events-none"></div>
+<div class="absolute top-4 right-4 bg-primary text-white p-2 text-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+<div class="mt-4 speech-bubble inline-block px-4 py-1 font-headline font-bold uppercase rotate-1">
+                        NEO_SHOGUNATE
+                    </div>
+</div>
+<!-- Panel 3 -->
+<div class="group relative">
+<div class="border-4 border-on-surface bg-white overflow-hidden manga-panel-shadow h-[220px] relative perspective-tilt">
+<img alt="Abstract architectural lines with ink bleed texture" class="w-full h-full object-cover grayscale group-hover:rotate-1 transition-transform" data-alt="Abstract brutalist architectural lines with heavy ink-bleed textures and dramatic screentone patterns, black and white aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw3Wy3v7rqjzz36sK-0j988U-83ShXKGzjsiz__U6PPTa5TzkoEbJf9y8wRMPv9-w9D_VUE8oxE_taobYFeJnDxKd4EgBj6aSQ7bk4fp2FFnBpBdQtO5COLbeOs4PDRdaieB80vx_iXoqzUJnXiNKO-t-Hn-2_Uig-_44ZMvV9EYJo5-ge6KvUupycxCnvz18xgEom3ShzVN_ETuTeOiAofUCN-i8RpQm_83btFLsBTbJdwdxLKAbfmBSbXCWGcUPvvvAJwHmFa70"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="mt-2 text-right">
+<span class="font-headline text-3xl font-black italic uppercase leading-none text-zinc-400 group-hover:text-primary transition-colors">BRUTALIST_INK</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Wide Panel Breaking the Grid -->
+<div class="md:col-span-12 mt-12 group relative">
+<div class="absolute -top-10 right-10 z-30 flex gap-4">
+<div class="bg-surface border-4 border-on-surface p-4 shadow-[4px_4px_0px_0px_#ba0029] rotate-3 max-w-[250px]">
+<p class="font-label text-[10px] leading-tight font-black uppercase tracking-tighter">
+                            "The visual language of the future is not spoken, it is drawn in high-contrast ink."
+                        </p>
+</div>
+</div>
+<div class="border-8 border-on-surface bg-zinc-900 h-[450px] relative overflow-hidden manga-panel-shadow">
+<div class="flex h-full">
+<div class="w-1/3 h-full border-r-4 border-on-surface relative overflow-hidden">
+<img alt="Close up of mechanical parts in manga ink style" class="w-full h-full object-cover grayscale contrast-125" data-alt="Close-up artistic shot of mechanical gears and wires with heavy ink outlines and dramatic screentone shading" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAthkTRc5iptUDTZqzFZ8JKwUYLhU-KqCX0yM0IFyGTwiwJ6J5pZKGUdatNa4fYYdlA12xYHoim3s-JvPJlL42SQiKXuh242xfbSModDU3z2Et3zI8r3mt5TyoqGHfhhZtuAcpAs2G5OE8DBJBDImi0mcfCmsLbgPBrlaSEkBaBbffQpqJNzDA5-gnM7863L0nLpDEtzO6Mu3_H9ir7wtDZ9TTMDTRGNcNfMCUvrPctnjxyPkI9qTmmhSfmGIJnaksCdH9WZIneon0"/>
+</div>
+<div class="w-2/3 h-full relative overflow-hidden">
+<img alt="Retro tech landscape with CRT monitors" class="w-full h-full object-cover grayscale contrast-150" data-alt="Retro-futuristic desktop with multiple CRT monitors and glowing wires, rendered in a high-contrast black and white manga panel style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFucb14dLh1R9cB72AICtu8NvjnK1HRiofNgmtATP9uZiusGcRnQQ3qSM1ZnSWLUulNjvW_2h0amEb-27M5RsQba-6bzRURoKCU9WCKqZB6FvK-KshBu7RFXRDWNhrx5c-9pZgk5_MJ0qekRhUgg0DXJKsMMLYdlApMor_JDUL4mZtiXsIpkoqk3lRvcKf8uLWnmfMCXZQ8pmsaHIx7RmS4ZB26FJ9JlHRcGxWJ15ZfNVzlhX5AMov-sddyWntqR9kx7Lc8opJMs"/>
+<div class="absolute inset-0 halftone opacity-40"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<h3 class="text-white font-headline text-9xl font-black opacity-20 uppercase tracking-tighter">ANALOG</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-6 left-12 bg-on-surface text-surface px-8 py-3 font-headline font-black italic text-4xl uppercase skew-x-[-12deg] z-10 border-2 border-primary">
+                    VOL_04: RETRO_TECH
+                </div>
+</div>
+<!-- Bottom Panels -->
+<div class="md:col-span-4 mt-8">
+<div class="border-4 border-on-surface h-[300px] relative group overflow-hidden manga-panel-shadow ink-bleed">
+<img alt="Abstract flowing ink shapes" class="w-full h-full object-cover grayscale contrast-200 group-hover:scale-150 transition-transform duration-1000" data-alt="Ethereal abstract flowing ink shapes in water, captured in high-speed monochrome photography with intense contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTHHEENTkPDLtxrCrokrh99DVcQMsWtgQX3x6EbA_2BW_oBTvY1pmPRYPvrnfzra2FpzIVI5q9iOq_50A-Y7CxMUmoSxVc5qI88C8TMzH66XWQBUTcz6h2OFE4aVXzZ-wqCrr1Z38oQ0GbscIGowTnjsYFq3oesTh_OR9uuRWmXSVebMLKr6tNIO_ZH-jCyPRLOm0Bob-shamd6bUCFUj8IDBbvQCj10dPXoGO6U5sHhm34W7p7AAhEBWxdy49rxXSgdDgD87vmso"/>
+<div class="absolute inset-0 flex items-center justify-center p-6 text-center">
+<span class="bg-white border-2 border-on-surface px-4 py-2 font-headline font-bold text-xl uppercase italic">THE_VOID_STUDY</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 mt-8 grid grid-cols-2 gap-8">
+<div class="border-4 border-on-surface h-[300px] relative group manga-panel-shadow rotate-1">
+<img alt="High speed train motion blur" class="w-full h-full object-cover grayscale group-hover:translate-x-4 transition-transform" data-alt="Dynamic motion blur of a high-speed bullet train entering a tunnel, dramatic perspective and sharp light streaks in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHfkVBJBq9cGEtpsIeBvfuZd5Olm_jJ3YLE3uHnx5T0vQhZFPHLYxClxLSy5wetmcpMsQklRgLbj21ea0OUY4GwP3vNganQ6l89JhAIwdh-nLqWbM6fnFRsM3uoGCvITIyPNj-CCDXoeFnSp3Cd7If1_nRnYPzcskikrFaeqlJLuDxczPkF9u6J8Jc0HOzmJRbQLE_J9r_pTtPxSOH_IAPaaoyBkUrkg0w-JuC5Kq4nQsxfgGZcb19xJ30UTuFPiM_n1Xw1pX8MJA"/>
+<div class="absolute bottom-4 left-4 bg-primary text-white font-label text-[10px] p-1 px-2 uppercase font-black">ACTIVE_MOTION</div>
+</div>
+<div class="border-4 border-on-surface h-[300px] relative group manga-panel-shadow -rotate-1">
+<img alt="Dark moody mountain landscape" class="w-full h-full object-cover grayscale contrast-150" data-alt="Dark dramatic mountain peaks shrouded in thick fog, heavy ink-wash style texture with high grit and contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5NOHZbaJnzDNHelc9igMRoQjNRx7CgBd27MbQDdc4JnKMJefGWSKty9h0x7WWLEiJziw6MaSVEfw2tr1HVSxdpyDjGhPCJ7Y1GrJubwxPk15QwMz2ZawCVA58Oh29nYpH_EI58UC7xoKDwfPwPpqEpj8izHuP4v3ouUv552XNNXHpsrM_8VRifdnPeunh3r9BAK10gOvcWig0on68T-Fb3ZWXWrRYGttJkZ1HKT0iQK7sQiaU9kEYWur4IicIkfXGun6JyeG8uMo"/>
+<div class="absolute top-0 left-0 w-full h-full bg-on-surface/40 mix-blend-multiply transition-opacity group-hover:opacity-0"></div>
+<div class="absolute inset-0 flex items-end p-4">
+<span class="font-headline font-black text-4xl text-white uppercase leading-none group-hover:text-primary transition-colors">CHAPTER_VII</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pagination/Action Ticker -->
+<div class="mt-24 border-y-4 border-on-surface py-2 overflow-hidden flex whitespace-nowrap bg-on-surface text-surface">
+<div class="flex gap-12 font-label text-xs font-black uppercase tracking-[0.5em] animate-marquee">
+<span>SCROLL FOR MORE CHAPTERS // LOADING CONTENT...</span>
+<span>SYSTEM STATUS: OPERATIONAL // KINETIC_EDITORIAL_PORTFOLIO</span>
+<span>VOL.04_ARCHIVE_DATA // SCROLL FOR MORE CHAPTERS</span>
+<span>SCROLL FOR MORE CHAPTERS // LOADING CONTENT...</span>
+<span>SYSTEM STATUS: OPERATIONAL // KINETIC_EDITORIAL_PORTFOLIO</span>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t-8 border-zinc-900 dark:border-zinc-50 relative overflow-hidden bg-zinc-100 dark:bg-zinc-900 flex flex-col md:flex-row justify-between items-center px-8 py-12 gap-6 after:content-[''] after:absolute after:inset-0 after:bg-[radial-gradient(#000_1px,transparent_0)] after:[background-size:4px_4px] after:opacity-10">
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold text-zinc-600 dark:text-zinc-400">
+            © 2024 KINETIC_EDITORIAL | ALL RIGHTS RESERVED
+        </div>
+<div class="flex gap-8 font-['Inter'] text-[10px] uppercase tracking-widest font-bold">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">EDITORIAL_NOTES</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">STAFF_CREDITS</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:italic" href="#">RESOURCES</a>
+</div>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+</body></html>
