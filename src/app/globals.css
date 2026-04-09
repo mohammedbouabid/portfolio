@@ -115,6 +115,48 @@ body {
   overflow-x: hidden;
 }
 
+/* === Custom scrollbar — hidden on mobile, red on desktop === */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f9f9f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ba0029;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e90036;
+  }
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  html.dark ::-webkit-scrollbar-track {
+    background: #0f1010;
+  }
+  html.dark ::-webkit-scrollbar-thumb {
+    background: #ba0029;
+  }
+  html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #e90036;
+  }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #ba0029 #f9f9f9;
+  }
+  html.dark {
+    scrollbar-color: #ba0029 #0f1010;
+  }
+}
+
 /* === Manga DNA utilities (ported from stitch) === */
 .screentone {
   background-image: radial-gradient(#1a1c1c 1px, transparent 0);
