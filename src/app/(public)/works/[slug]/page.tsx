@@ -19,7 +19,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
   const next = all[(idx + 1) % all.length];
 
   return (
-    <main className="pt-24 pb-20 max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <main className="pt-24 pb-20 max-w-[1400px] mx-auto px-6 md:px-24 lg:px-32 grid grid-cols-1 lg:grid-cols-12 gap-12">
       <div className="lg:col-span-8 space-y-16">
         <section className="relative">
           <div className="absolute -top-4 -left-4 bg-primary text-white font-headline font-black text-3xl md:text-6xl p-4 z-10 -rotate-2 border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(26,28,28,1)]">{project.title}</div>

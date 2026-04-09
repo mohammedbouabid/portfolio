@@ -11,7 +11,7 @@ const TOC = [
 export default async function WorksPage() {
   const projects = await getProjects();
   return (
-    <main className="pt-32 pb-20 px-4 md:px-12 max-w-7xl mx-auto overflow-hidden">
+    <main className="pt-32 pb-20 px-4 md:px-24 lg:px-32 max-w-7xl mx-auto overflow-hidden">
       <header className="mb-16 border-l-8 border-primary pl-6 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
           <h1 className="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none -rotate-1 origin-left">

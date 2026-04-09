@@ -10,13 +10,23 @@ export const metadata: Metadata = {
   title: "Mohammed Bouabid — Full Stack & ERP Developer",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" }
+      // Light mode (dark glyph)
+      { url: "/favicon-light/favicon.ico", sizes: "any", media: "(prefers-color-scheme: light)" },
+      { url: "/favicon-light/favicon-16x16.png", sizes: "16x16", type: "image/png", media: "(prefers-color-scheme: light)" },
+      { url: "/favicon-light/favicon-32x32.png", sizes: "32x32", type: "image/png", media: "(prefers-color-scheme: light)" },
+      { url: "/favicon-light/android-chrome-192x192.png", sizes: "192x192", type: "image/png", media: "(prefers-color-scheme: light)" },
+      { url: "/favicon-light/android-chrome-512x512.png", sizes: "512x512", type: "image/png", media: "(prefers-color-scheme: light)" },
+      // Dark mode (light glyph)
+      { url: "/favicon.ico", sizes: "any", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png", media: "(prefers-color-scheme: dark)" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png", media: "(prefers-color-scheme: dark)" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png", media: "(prefers-color-scheme: dark)" }
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }]
+    apple: [
+      { url: "/favicon-light/apple-touch-icon.png", sizes: "180x180", media: "(prefers-color-scheme: light)" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", media: "(prefers-color-scheme: dark)" }
+    ]
   },
   manifest: "/site.webmanifest"
 };
@@ -24,6 +34,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${manrope.variable} ${inter.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}}catch(e){}"
+          }}
+        />
+      </head>
       <body className="bg-surface text-on-surface font-body selection:bg-primary selection:text-white">
         {children}
         <svg aria-hidden="true" style={{ position: "absolute", width: 0, height: 0 }}>

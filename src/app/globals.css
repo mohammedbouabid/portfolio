@@ -5,6 +5,104 @@
 :root {
   color-scheme: light;
 }
+html.dark {
+  color-scheme: dark;
+}
+
+/* === Dark mode overrides ===
+   Color logic:
+     ink (#1a1c1c) <-> paper (#f0f1f1)
+     deep paper #0f1010 = page bg in dark
+     panel paper #1a1c1c = card bg in dark
+*/
+.dark body {
+  background: #0f1010;
+  color: #f0f1f1;
+}
+
+/* Page surfaces */
+.dark .bg-surface,
+.dark .bg-background,
+.dark .bg-surface-bright { background-color: #0f1010 !important; }
+
+/* Card / panel surfaces */
+.dark .bg-white,
+.dark .bg-zinc-100,
+.dark .bg-zinc-200,
+.dark .bg-surface-container,
+.dark .bg-surface-container-low,
+.dark .bg-surface-container-lowest,
+.dark .bg-surface-container-high,
+.dark .bg-surface-container-highest,
+.dark .bg-surface-variant,
+.dark .bg-secondary-container { background-color: #1a1c1c !important; }
+
+/* Inverted surfaces (the on-surface dark blocks become light blocks in dark mode) */
+.dark .bg-on-surface { background-color: #f0f1f1 !important; }
+.dark .bg-on-surface\/80 { background-color: rgba(240,241,241,0.85) !important; }
+.dark .bg-on-surface\/40 { background-color: rgba(240,241,241,0.4) !important; }
+
+/* Text colors */
+.dark .text-on-surface { color: #f0f1f1 !important; }
+.dark .text-on-surface\/70 { color: rgba(240,241,241,0.7) !important; }
+.dark .text-on-surface-variant { color: #c4c4c4 !important; }
+.dark .text-surface,
+.dark .text-background { color: #0f1010 !important; }
+.dark .text-secondary { color: #b0b0b0 !important; }
+.dark .text-zinc-500,
+.dark .text-zinc-600,
+.dark .text-zinc-400 { color: #a1a1a1 !important; }
+
+/* Borders (heavy ink strokes need to flip) */
+.dark .border-on-surface,
+.dark .border-zinc-900 { border-color: #f0f1f1 !important; }
+.dark .border-on-surface-variant { border-color: #5a5a5a !important; }
+
+/* Hard offset shadows: solid blocks of ink → solid blocks of paper */
+.dark .manga-panel-shadow { box-shadow: 8px 8px 0px 0px #f0f1f1 !important; }
+.dark .hard-shadow { box-shadow: 6px 6px 0px 0px rgba(240,241,241,1) !important; }
+.dark .shadow-\[6px_6px_0px_0px_rgba\(26\2c 28\2c 28\2c 1\)\] { box-shadow: 6px 6px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[4px_4px_0px_0px_rgba\(26\2c 28\2c 28\2c 1\)\] { box-shadow: 4px 4px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[8px_8px_0px_0px_rgba\(26\2c 28\2c 28\2c 1\)\] { box-shadow: 8px 8px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[12px_12px_0px_0px_rgba\(26\2c 28\2c 28\2c 1\)\] { box-shadow: 12px 12px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[16px_16px_0px_0px_\#1a1c1c\] { box-shadow: 16px 16px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[8px_8px_0px_0px_\#1a1c1c\] { box-shadow: 8px 8px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[12px_12px_0px_0px_\#1a1c1c\] { box-shadow: 12px 12px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[6px_6px_0px_0px_\#1a1c1c\] { box-shadow: 6px 6px 0px 0px #f0f1f1 !important; }
+.dark .shadow-\[4px_4px_0px_0px_\#1a1c1c\] { box-shadow: 4px 4px 0px 0px #f0f1f1 !important; }
+/* The #eeeeee "misregistered print" shadow becomes a deeper grey in dark */
+.dark .shadow-\[8px_8px_0px_0px_\#eeeeee\] { box-shadow: 8px 8px 0px 0px #2a2c2c !important; }
+
+/* Manga textures: invert dot color so the screentone reads on dark paper */
+.dark .screentone,
+.dark .halftone {
+  background-image: radial-gradient(#f0f1f1 1px, transparent 0) !important;
+}
+.dark .screentone-light {
+  background-image: radial-gradient(rgba(240,241,241,0.15) 1px, transparent 0) !important;
+}
+
+/* Speech / word balloons (inline white backgrounds) */
+.dark .speech-bubble,
+.dark .word-balloon {
+  background: #1a1c1c !important;
+  border-color: #f0f1f1 !important;
+}
+.dark .speech-bubble::after { border-top-color: #f0f1f1 !important; }
+.dark .word-balloon::after { border-top-color: #f0f1f1 !important; }
+
+/* Form inputs in admin */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #1a1c1c !important;
+  color: #f0f1f1 !important;
+  border-color: #f0f1f1 !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: #777 !important; }
+
+/* Footer halftone background (inline radial-gradient) — leave as is, dots are dark and the bg flips */
 
 html,
 body {

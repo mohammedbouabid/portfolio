@@ -6,7 +6,7 @@ export default async function AboutPage() {
   ]);
 
   return (
-    <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-24">
+    <main className="pt-32 pb-20 px-6 md:px-24 lg:px-32 max-w-7xl mx-auto space-y-24">
       <div className="relative w-full overflow-hidden mb-12">
         <h1 className="font-headline font-black text-7xl md:text-[12rem] uppercase tracking-tighter italic sound-effect -rotate-2 select-none opacity-10">BUILD!</h1>
       </div>
