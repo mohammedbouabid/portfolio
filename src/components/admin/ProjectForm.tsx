@@ -34,7 +34,7 @@ export default function ProjectForm({ initial, id }: { initial: any; id?: number
     setBusy(true);
     const payload = {
       ...data,
-      stack: data.stackText.split(",").map((s) => s.trim()).filter(Boolean)
+      stack: data.stackText.split(",").map((s: string) => s.trim()).filter(Boolean)
     };
     const url = id ? `/api/admin/projects/${id}` : "/api/admin/projects";
     const method = id ? "PUT" : "POST";

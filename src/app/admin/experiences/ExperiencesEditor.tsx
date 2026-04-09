@@ -46,8 +46,8 @@ function Row({
       role: d.role,
       period: d.period,
       location: d.location,
-      bullets: d.bulletsText.split("\n").map((s) => s.trim()).filter(Boolean),
-      stack: d.stackText.split(",").map((s) => s.trim()).filter(Boolean)
+      bullets: d.bulletsText.split("\n").map((s: string) => s.trim()).filter(Boolean),
+      stack: d.stackText.split(",").map((s: string) => s.trim()).filter(Boolean)
     };
     const url = item.id ? `/api/admin/experiences/${item.id}` : "/api/admin/experiences";
     const method = item.id ? "PUT" : "POST";
